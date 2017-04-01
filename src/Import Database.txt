@@ -1,0 +1,59 @@
+Drop database if exists devangproject;
+create database devangproject;
+use devangproject;
+
+create table books
+(    RegNo int(10) primary key,
+     Name varchar(50),
+     Genere varchar(50),
+     Author varchar(50),
+     Publisher varchar(50),
+     EntDate date,
+     EntName varchar(50),
+     photo varchar(200),
+     IssueT int(10)
+);
+
+
+create table discarded
+(   RegNo int(10) primary key,
+    Name varchar(50),
+    Genere varchar(50),
+    Author varchar(50),
+    Publisher varchar(50),
+    EntDate date,
+    EntName varchar(50),
+    photo varchar(200),
+    IssueT int(10)
+);
+
+
+create table admina
+(   Name varchar(50),
+    UserID varchar(50) Unique,
+    UserPass varchar(50),
+    SecQue varchar(100),
+    SecAns varchar(100),
+    photo varchar(50)
+);
+
+create table history
+( ddate date,
+  UserID varchar(50),
+  Name varchar(50),
+  Time varchar(100)
+);
+
+
+insert into books values(1 ,"Informatic Pratices","Computers","Sumita Arora","Dhanpat Rai Publi",null,null,null,+null);
+insert into books values(2 ,"Business Studies","Theory","Unknown","CBSE",null,null,null,+null);
+insert into books values(3 ,"Accountancy","Accounts","Sumita Arora","Dhanpat Rai Publi",null,null,null,+null);
+insert into books values(4 ,"Economics","Economics","TR Jain","Saraswati Rai Publi",null,null,null,+null);
+insert into books values(5 ,"Moral Science","Moral Values","Private","Golden Rai Publi",null,null,null,+null);
+
+insert into admina values("Devang", "devang", "devang","What is your Hobby??","Computers",null);
+insert into admina values("SuperUser", "root", "pass",null,null,null);
+
+
+
+
